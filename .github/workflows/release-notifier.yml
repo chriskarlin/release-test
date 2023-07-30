@@ -8,9 +8,13 @@ jobs:
   release:
     name: Release Commenter
     runs-on: [ ubuntu-latest ]
+    permissions:
+      pull-requests: write
     steps:
       - uses: apexskier/github-release-commenter@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           comment-template: |
-            "{author}: Your PR is part of today's Human Essentials production release: {release_name}. Thank you very much for your contribution!"
+            {author}: Your PR is part of today's Human Essentials production release: {release_name}. Thank you very much for your contribution!
+            link: {release_link}
+            tag: {release_tag}
