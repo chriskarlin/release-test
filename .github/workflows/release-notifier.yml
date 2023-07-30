@@ -1,0 +1,16 @@
+name: Release Contribution Notifier
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    name: Release Commenter
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - uses: apexskier/github-release-commenter@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          comment-template: |
+            "{author}: Your PR is part of today's Human Essentials production release: {release_name}. Thank you very much for your contribution!"
