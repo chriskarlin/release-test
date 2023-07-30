@@ -8,8 +8,7 @@ jobs:
   release:
     name: Release Commenter
     runs-on: [ ubuntu-latest ]
-    permissions:
-      pull-requests: write
+    permissions: read-all
     steps:
       - uses: apexskier/github-release-commenter@v1
         with:
