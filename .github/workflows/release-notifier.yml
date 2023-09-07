@@ -11,6 +11,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      issues: write
     steps:
       - uses: chriskarlin/github-release-commenter@author-template
         with:
