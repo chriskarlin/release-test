@@ -13,7 +13,7 @@ jobs:
       pull-requests: write
       issues: write
     steps:
-      - uses: chriskarlin/github-release-commenter@fix-noise
+      - uses: chriskarlin/github-release-commenter@v1.3.3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           skip-linked: true
