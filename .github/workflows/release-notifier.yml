@@ -13,7 +13,7 @@ jobs:
       pull-requests: write
       issues: write
     steps:
-      - uses: chriskarlin/github-release-commenter@test
+      - uses: chriskarlin/github-release-commenter@fix-noise
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           comment-template: |
